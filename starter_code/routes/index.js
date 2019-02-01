@@ -10,6 +10,7 @@ router.get('/', (req, res, next) => {
 router.get('/movies', (req,res)=>{
   Movies.find()
   .then(movies =>{
+    
     res.render('movies', {movies})
   })
   .catch(err =>{
